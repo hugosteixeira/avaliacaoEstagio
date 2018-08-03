@@ -1,16 +1,21 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
-    public static String enderecoArquivo = "D:\\AdVerus\\src\\estoque.csv";
+    public static String enderecoArquivo = "D:\\avaliacaoEstagio\\src\\estoque.csv";
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         Loja loja = criarLoja(enderecoArquivo);
         printarProdutosMaisCaros(loja);
         printarMediaPrecos(loja);
         printarQuantidades(loja);
+        HTMLMaker htmlMaker = new HTMLMaker();
+        htmlMaker.setTabelas(loja);
+        htmlMaker.setText();
+        htmlMaker.writeFile();
     }
 
     private static void printarProdutosMaisCaros(Loja loja) {

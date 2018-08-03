@@ -30,6 +30,7 @@ public class Loja {
         for (Produto produto:this.produtos){
             if (produto.getPreco() > maiorValor){
                 maiorValor = produto.getPreco();
+                produto2 = produto1;
                 produto1 = produto;
             }
             else if(produto.getPreco() > maiorValor1){
