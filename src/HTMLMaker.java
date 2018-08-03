@@ -17,7 +17,7 @@ public class HTMLMaker {
             tabelas = tabelas +"<tr> " +
                     "<td>"+produto.getDescricao()+"</td>"+
                     "<td>"+produto.getMarca()+"</td>"+
-                    "               <td>"+Float.toString(produto.getPreco())+"</td>"+
+                    "               <td>"+String.format("%.2f",produto.getPreco())+"</td>"+
                     "               <td>"+Integer.toString(produto.getQuantidade())+"</td>"+
                     "               </tr>\n";
         }
