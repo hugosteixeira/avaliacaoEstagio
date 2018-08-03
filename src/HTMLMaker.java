@@ -14,7 +14,6 @@ public class HTMLMaker {
     public void setTabelas(Loja loja){
         String tabelas="";
         for (Produto produto: loja.getProdutos()){
-            System.out.println(tabelas);
             tabelas = tabelas +"<tr> " +
                     "<td>"+produto.getDescricao()+"</td>"+
                     "<td>"+produto.getMarca()+"</td>"+
