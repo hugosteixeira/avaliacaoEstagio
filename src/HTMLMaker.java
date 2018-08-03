@@ -25,7 +25,7 @@ public class HTMLMaker {
     }
 
     public void writeFile() throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter("extra.html", "UTF-8");
+        PrintWriter writer = new PrintWriter("estoque.html", "UTF-8");
         writer.println(this.text);
         writer.close();
     }
